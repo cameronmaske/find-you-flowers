@@ -1,0 +1,9 @@
+*.pyc
+*.pyo
+*~
+.DS_Store
+.env
+.vfenv
+.Python
+.foreman
+.coverage
