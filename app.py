@@ -11,7 +11,7 @@ app.config['MONGO_URI'] = os.environ.get('MONGOHQ_URL', 'mongodb://localhost/flo
 app.config['DEBUG'] = False if os.environ.get('HEROKU') else True
 app.config['SECRET_KEY'] = os.environ.get('SECRET_KEY', 'secret_key')
 app.config['DEBUG_TB_PANELS'] = DebugToolbar.config['DEBUG_TB_PANELS'] + ('flask_debugtoolbar_mongo.panel.MongoDebugPanel',)
-app.config['REDIS_URL'] = os.environ.get('REDIS_URL', 'redis://:@localhost:6379/')
+app.config['REDIS_URL'] = os.environ.get('REDISCLOUD_URL', 'redis://:@localhost:6379/')
 
 
 redis = Redis(app)
